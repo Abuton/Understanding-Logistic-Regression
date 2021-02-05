@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Breast Cancer Diagnosis</title>
+	<meta charset="utf-8">
+</head>
+<style type="text/css">
+	.button {
+	  background-color: #4CAF50; /* Green */
+	  border: 2px solid #90162A;
+	  border-radius: 8px;
+	  color: white;
+	  padding: 15px 32px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 14px;
+	  transition-duration: 0.4s;
+	}
+	.button:hover {
+	  background-color: #78ACEA; 
+	  color: white;
+	  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);	
+	}
+	.content {
+	  max-width: 500px;
+	  margin: auto;
+	}
+	input[type=text] {
+	  /*width: 25%;*/
+	  padding: 10px 18px;
+	  margin: 10px 0;
+	  box-sizing: border-box;
+}
+
+</style>
+<body>
+
+	<div class="content">
+		<h1>A simple Health Application </h1>
+		<p>The App accepts some input features and produces an output that says if a patient has Benign or Malignant kind of cancer.</p>
+
+		<form action="{{ url_for('predict') }}" method="post">
+			<input type="text" name="concavity_worst" placeholder="concavity_worst" required="required">
+
+			<input type="text" name="compactness_worst" placeholder="compactness_worst" required="required">
+			<input type="text" name="symmetry" placeholder="symmetry" required="required">
+			<input type="text" name="concave_points" placeholder="concave_points" required="required">
+			<input type="text" name="concavity_mean" placeholder="concavity_mean" required="required">
+			<input type="text" name="compactness_mean" placeholder="compactness_mean" required="required">
+			<input type="text" name="concave_points_mean" placeholder="concave_points_mean" required="required">
+			<input type="text" name="texture" placeholder="texture" required="required">
+			<input type="text" name="perimeter_worse" placeholder="perimeter_worse" required="required">
+			<input type="text" name="area" placeholder="area" required="required">
+			<br><br>
+
+			<button type="submit" class="button">
+				Get Diagnose Result
+			</button>
+		</form>
+
+		<br><br><br>
+
+		<center> <h1>{{ prediction_text }} </h1></center>
+		
+	</div>
+
+</body>
+</html>
