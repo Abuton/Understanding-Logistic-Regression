@@ -27,5 +27,6 @@ Well the answer is No. There are other types of Logistic Regression
 2. There should be no Outliers in the data (scaled data is prefered)
 3. There should be no high correlations (MultiCollinearity) among the predictors
 
-Built a simple Logistic Regression to explain what it does and used some simple feature selection algorithm based on Feature Importance using the coef_ method. Which determines how important the features are in terms of predicting the classes using the predictors
+Built a simple Logistic Regression to explain what it does and used some simple feature selection algorithm based on Feature Importance using the coef_ method. Which determines how important the features are in terms of predicting the classes using the predictors.
+
 Model has a 97% accuracy score and a 95% F1-score
