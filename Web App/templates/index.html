@@ -7,7 +7,7 @@
 <style type="text/css">
 	.button {
 	  background-color: #4CAF50; /* Green */
-	  border: 2px solid #90162A;
+	  border: 2px solid #000000;
 	  border-radius: 8px;
 	  color: white;
 	  padding: 15px 32px;
@@ -23,15 +23,21 @@
 	  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);	
 	}
 	.content {
-	  max-width: 500px;
-	  margin: auto;
+	  max-width: 600px;
+	  margin: 0 auto;
+	  display: block;
+	  background-color: #5465AC;
+	  font-family: sans-serif;
 	}
-	input[type=text] {
+	input[type=number] {
 	  /*width: 25%;*/
 	  padding: 10px 18px;
 	  margin: 10px 0;
 	  box-sizing: border-box;
-}
+	}
+	.form{
+		/*margin: 0px auto;*/
+	}
 
 </style>
 <body>
@@ -40,18 +46,18 @@
 		<h1>A simple Health Application </h1>
 		<p>The App accepts some input features and produces an output that says if a patient has Benign or Malignant kind of cancer.</p>
 
-		<form action="{{ url_for('predict') }}" method="post">
-			<input type="text" name="concavity_worst" placeholder="concavity_worst" required="required">
+		<form action="{{ url_for('predict') }}" method="post" class="form">
+			<input type="number" name="concavity_worst" placeholder="concavity_worst" required="required">
 
-			<input type="text" name="compactness_worst" placeholder="compactness_worst" required="required">
-			<input type="text" name="symmetry" placeholder="symmetry" required="required">
-			<input type="text" name="concave_points" placeholder="concave_points" required="required">
-			<input type="text" name="concavity_mean" placeholder="concavity_mean" required="required">
-			<input type="text" name="compactness_mean" placeholder="compactness_mean" required="required">
-			<input type="text" name="concave_points_mean" placeholder="concave_points_mean" required="required">
-			<input type="text" name="texture" placeholder="texture" required="required">
-			<input type="text" name="perimeter_worse" placeholder="perimeter_worse" required="required">
-			<input type="text" name="area" placeholder="area" required="required">
+			<input type="number" name="compactness_worst" placeholder="compactness_worst" required="required">
+			<input type="number" name="symmetry" placeholder="symmetry" required="required">
+			<input type="number" name="concave_points" placeholder="concave_points" required="required" maxlength = "40">
+			<input type="number" name="concavity_mean" placeholder="concavity_mean" required="required">
+			<input type="number" name="compactness_mean" placeholder="compactness_mean" required="required">
+			<input type="number" name="concave_points_mean" placeholder="concave_points_mean" required="required">
+			<input type="number" name="texture" placeholder="texture" required="required">
+			<input type="number" name="perimeter_worse" placeholder="perimeter_worse" required="required">
+			<input type="number" name="area" placeholder="area" required="required">
 			<br><br>
 
 			<button type="submit" class="button">
@@ -61,7 +67,7 @@
 
 		<br><br><br>
 
-		<center> <h1>{{ prediction_text }} </h1></center>
+		<center> <h4>{{ prediction_text }} </h4></center>
 		
 	</div>
 
