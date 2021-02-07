@@ -13,3 +13,12 @@ predicting a class label, called classification.
 ### how important is Feature Importance to our Model?
 Feature importance scores play an important role in a predictive modeling project, including providing insight into the data, insight into the model, and 
 the basis for dimensionality reduction and feature selection that can improve the efficiency and effectiveness of a predictive model on the problem.
+
+Feature Importance can be used to improve the performance of a predictive model: this can be achived by selecting only the most importanct features from the list of prectors
+and training your model with those features. 
+
+Feature Importance helps to reduce model complexity: What this means is that instead of training a ML model with 30 features, computing feature importance can afford you the chance to build the model with just 10 models and still have a good score in terms of evaluation. It possible you get even a better score
+
+### Some of the disadvantage of Feature Importance
+1. Sometimes removing less important features reduce the performance of the model
+
