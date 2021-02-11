@@ -1,0 +1,38 @@
+## Linear Regression
+Linear Regression is a statistical method that allows us to summarize and study and understand relationships between two or more continuous (quantitative) variables. This means that it deals
+with continous values like (1.2, 5, 3.2, 8) etc.
+Essentially, linear regression is used to assess the strength of the relationship between variables and for modeling the future relationship between them.
+
+Linear Regression is just a small part of Regression. Regression models includes several kinds, which include the linear regression, multiple linear regression, and nonlinear. 
+The most common models are simple linear and multiple linear. The simple linear is also termed as the linear regression.
+Nonlinear regression analysis is commonly used for more complicated data sets in which the dependent and independent variables show a nonlinear relationship. Examples of Non linear 
+regression models are the Decision Tree models, Forest models etc. These methods does not assume linear relationships exists amongest features, it uses other intuitions like 
+generating new rules based on hidden patterns that exist within the data.
+
+Linear model assumptions
+Linear regression analysis is based on some fundamental assumptions:
+
+1. The predictor and target variables show a linear relationship between the slope and the intercept.
+2. The value of the residual (error) is zero.
+3. The independent variable is not random.
+4. The residual (error) values follow the gaussian distribution.
+
+### Simple linear regression model is expressed using the following equation:
+
+`**Y = a + bX + C**`
+
+Where
+
+Y = dependent (target) variable
+
+a = Intercept
+
+b = co-efficient(slope)
+
+X = independent (predictor) variable
+
+C = Residual (constant)
+
+### Multiple linear regression
+
+ 
