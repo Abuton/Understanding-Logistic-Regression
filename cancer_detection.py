@@ -1,6 +1,15 @@
 import streamlit as st
 import pickle
 
+st.markdown("""<style>
+					body{
+						background-color:lightgreen;
+						color: #865690;
+						}
+				</style>""",
+					 unsafe_allow_html=True)
+
+
 st.title('A simple Health Application')
 
 st.write("#### The App accepts some input features and produces an output that \
@@ -32,7 +41,5 @@ if prediction == 0: prediction='Benign'
 else: prediction="Malignant"
 diagnosis = st.button('Get Diagnosis')
 if diagnosis:
-    st.info(prediction)
-    st.info(prediction_proba)
-    st.warning(prediction)
     st.success(prediction)
+    st.balloons()
