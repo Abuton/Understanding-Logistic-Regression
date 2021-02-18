@@ -29,4 +29,6 @@ Well the answer is No. There are other types of Logistic Regression
 
 Built a simple Logistic Regression to explain what it does and used some simple feature selection algorithm based on Feature Importance using the coef_ method. Which determines how important the features are in terms of predicting the classes using the predictors.
 
+Machine Learning Model is deployed and available <a href="https://share.streamlit.io/abuton/understanding-logistic-regression/deployment/cancer_detection.py"> here</a>
+
 Model has a 97% accuracy score and a 95% F1-score
