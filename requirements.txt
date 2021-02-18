@@ -1,4 +1,0 @@
-Flask==1.0.4
-numpy==1.18.5
-streamlit==0.69.2
-sklearn==0.20.4
